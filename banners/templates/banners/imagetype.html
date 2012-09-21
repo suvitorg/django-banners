@@ -1,0 +1,10 @@
+{% load thumbnail %}
+
+{% thumbnail banner.file.name banner.get_size upscale=False as im %}
+<img src="{{im.url}}"
+     alt="{{banner.title}}"
+     title="{{banner.title}}"
+     class="banner"
+     style="margin:{{ im|margin:size }}"
+     />
+{% endthumbnail %}
