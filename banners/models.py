@@ -58,7 +58,7 @@ class BannerManager(models.Manager):
     def get_for_target(self, target, soft=True):
 
         banners = self._get_for_target(target)
-        if not soft or banners or not hasattr(target, '_tree_manager'):
+        if not soft or not hasattr(target, '_tree_manager') or banners.exists():
             return banners
 
         parent_attr = getattr(target._meta, 'parent_attr', 'parent')
