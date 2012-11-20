@@ -9,11 +9,14 @@ from django.utils.functional import lazy
 
 IMAGE = 0
 FLASH = 1
+YADIRECT = 2
 BANNER_TYPES = ((IMAGE, u"Картинка"),
                 (FLASH, u"Флэш"),
+                (YADIRECT, u"Яндекс.директ"),
                 )
 BANNER_WIDGETS = {IMAGE: 'banners/imagetype.html',
-                  FLASH: 'banners/flashtype.html'
+                  FLASH: 'banners/flashtype.html',
+                  YADIRECT: 'banners/yadirecttype.html',
                  }
 
 # TODO banner_type is model and subclassing it
@@ -88,6 +91,8 @@ class Banner(models.Model):
 
     width = models.PositiveIntegerField(u"Ширина", blank=True, null=True)
     height = models.PositiveIntegerField(u"Высота", blank=True, null=True)
+
+    target = models.CharField(u"Цель", max_length=200, blank=True, null=True)
 
     objects = BannerManager()
 
