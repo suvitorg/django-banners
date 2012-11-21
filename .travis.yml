@@ -10,3 +10,7 @@ install:
   - "pip install -e . --use-mirrors"
 script:
   - python setup.py test
+notifications:
+  email:
+    on_success: change
+    on_failure: change
