@@ -4,10 +4,12 @@ python:
   - 2.7
 env:
   - DJANGO_VERSION=1.3.4
-  - DJANGO_VERSION=1.4
-  - DJANGO_VERSION=dev  
+  - DJANGO_VERSION=1.4.2
+  - DJANGO_VERSION=https://github.com/django/django/zipball/master  
 install:
   - "pip install -r requirements.txt --use-mirrors"
   - "pip install -U -q Django==$DJANGO_VERSION --use-mirrors"
+before_script:
+  - if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse
 script:
   - python quicktest.py banners
