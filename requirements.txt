@@ -1,4 +1,2 @@
 django
 django-smart-selects
-pyyaml
-

@@ -33,5 +33,6 @@ setup(
             'requirements.txt'
         )
     ).read(),
+    test_require=['pyyaml'],
     include_package_data=True,
 )
