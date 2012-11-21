@@ -10,6 +10,6 @@ install:
   - "pip install -r requirements.txt --use-mirrors"
   - "pip install -U -q Django==$DJANGO_VERSION --use-mirrors"
 before_script:
-  - if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse
+  - "if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install argparse; fi"
 script:
   - python quicktest.py banners
