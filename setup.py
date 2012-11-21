@@ -33,6 +33,7 @@ setup(
             'requirements.txt'
         )
     ).read(),
-    test_require=['pyyaml'],
+    tests_require=['pyyaml'],
+    test_suite='runtests',
     include_package_data=True,
 )

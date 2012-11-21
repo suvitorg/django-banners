@@ -1,4 +1,6 @@
+import sys
 from django.conf import settings
+from django.core.management import call_command
 
 settings.configure(
     INSTALLED_APPS=[
@@ -16,5 +18,5 @@ settings.configure(
     },
 )
 
-from django.core.management import call_command
-call_command("test", "django_ses")
+call_command("test", "banners")
+sys.exit(0)

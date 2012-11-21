@@ -9,4 +9,4 @@ install:
   - "pip install -q Django==$DJANGO_VERSION --use-mirrors"
   - "pip install -e . --use-mirrors"
 script:
-  - python runtests.py
+  - python setup.py test
