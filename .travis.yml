@@ -7,9 +7,8 @@ env:
   - DJANGO_VERSION=1.4.2
   - DJANGO_VERSION=https://github.com/django/django/zipball/master  
 install:
-  - "pip install -q -r requirements.txt --use-mirrors"
   - "pip install -q Django==$DJANGO_VERSION --use-mirrors"
-before_script:
+  - "pip install -q -e . --use-mirrors"
   - "if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install -q argparse; fi"
 script:
   - python quicktest.py banners
