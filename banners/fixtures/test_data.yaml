@@ -1,0 +1,23 @@
+- model: auth.user
+  pk: 1
+  fields:
+    username: admin
+    first_name: Victor
+    last_name: Safronovich
+    email: vsafronovich@gmail.com
+    password: sha1$98185$28282ef0928066ce07a70c9e683b308f3dc7ad2e
+    is_superuser: 1
+    is_staff: 1
+- model: banners.bannerblock
+  pk: 1
+  fields:
+    height: 100
+    title: test
+- model: banners.banner
+  pk: 1
+  fields:
+    title: test
+    active: 1
+    file: images/banners/XOrP7EpFoKM.jpg
+    banner_place: 1
+    target: '/'
