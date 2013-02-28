@@ -10,13 +10,16 @@ from django.utils.functional import lazy
 IMAGE = 0
 FLASH = 1
 YADIRECT = 2
+ADEASY = 3
 BANNER_TYPES = ((IMAGE, u"Картинка"),
                 (FLASH, u"Флэш"),
                 (YADIRECT, u"Яндекс.директ"),
+                (ADEASY, u"AdEasy"),
                 )
 BANNER_WIDGETS = {IMAGE: 'banners/imagetype.html',
                   FLASH: 'banners/flashtype.html',
                   YADIRECT: 'banners/yadirecttype.html',
+                  ADEASY: 'banners/adeasy.html',
                  }
 
 # TODO banner_type is model and subclassing it

@@ -1,0 +1,9 @@
+{% with width=banner.get_width height=banner.get_height %}
+<script type='text/javascript'>//<![CDATA[
+    var rnd = Math.floor(Math.random()*99999999999);
+    document.write("<iframe src='//server.adeasy.ru/servead/request/{{ banner.target }}");
+    document.write("?cb=");
+    document.write(rnd+"'");
+    document.write(" width='{{width}}' height='{{height}}' style='width:{{width}}px; height:{{height}}px;' frameborder='0' scrolling='no'></iframe>");
+//]]></script>
+{% endwith %}
