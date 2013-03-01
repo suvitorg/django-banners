@@ -14,13 +14,13 @@ class Migration(SchemaMigration):
         db.alter_column('banners_banner', 'banner_place_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['banners.BannerBlock']))
 
         # Adding index on 'Banner', fields ['banner_place']
-        db.create_index('banners_banner', ['banner_place_id'])
+        #db.create_index('banners_banner', ['banner_place_id'])
 
 
     def backwards(self, orm):
         
         # Removing index on 'Banner', fields ['banner_place']
-        db.delete_index('banners_banner', ['banner_place_id'])
+        #db.delete_index('banners_banner', ['banner_place_id'])
 
         # Renaming column for 'Banner.banner_place' to match new field type.
         db.rename_column('banners_banner', 'banner_place_id', 'banner_place')

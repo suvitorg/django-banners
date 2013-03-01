@@ -6,7 +6,7 @@ from django.contrib.contenttypes.generic import (GenericTabularInline,
 from django.contrib.contenttypes.models import ContentType
 from django.forms import ModelForm
 
-from smart_selects.form_fields import GenericChainedModelChoiceField
+from smart_generic.form_fields import GenericChainedModelChoiceField
 
 from models import BannerBlock, Banner, BannerItem
 
