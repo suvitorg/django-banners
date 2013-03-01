@@ -1,2 +1,2 @@
 django
-django-smart-selects
+django-smart-selects-generic>=0.0.2,<1.0
